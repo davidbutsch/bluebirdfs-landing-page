@@ -1,7 +1,12 @@
+import { AppProvider } from "@/providers";
 import { Typography } from "@mui/material";
 
 const App = (): JSX.Element => {
-  return <Typography>App</Typography>;
+  return (
+    <AppProvider>
+      <Typography>App</Typography>
+    </AppProvider>
+  );
 };
 
 export default App;
