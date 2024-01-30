@@ -1,10 +1,10 @@
 import { AppProvider } from "@/providers";
-import { Typography } from "@mui/material";
+import { AppRoutes } from "./routes";
 
 const App = (): JSX.Element => {
   return (
     <AppProvider>
-      <Typography>App</Typography>
+      <AppRoutes />
     </AppProvider>
   );
 };
