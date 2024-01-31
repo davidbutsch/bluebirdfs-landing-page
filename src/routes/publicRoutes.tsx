@@ -1,6 +1,7 @@
 import { Navigate, Outlet, RouteObject } from "react-router-dom";
 
 import { AppLayout } from "@/components";
+import { homeRoutes } from "@/features/Home";
 
 export const publicRoutes: RouteObject[] = [
   {
@@ -13,7 +14,7 @@ export const publicRoutes: RouteObject[] = [
     children: [
       {
         path: "/",
-        element: "App",
+        children: homeRoutes,
       },
       {
         path: "*",
