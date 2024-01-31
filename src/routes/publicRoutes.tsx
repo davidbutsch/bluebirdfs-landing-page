@@ -1,7 +1,5 @@
 import { Navigate, Outlet, RouteObject } from "react-router-dom";
 
-import { Page } from "@/components";
-
 export const publicRoutes: RouteObject[] = [
   {
     path: "/",
@@ -9,7 +7,7 @@ export const publicRoutes: RouteObject[] = [
     children: [
       {
         path: "/",
-        element: <Page>App</Page>,
+        element: "App",
       },
       {
         path: "*",
