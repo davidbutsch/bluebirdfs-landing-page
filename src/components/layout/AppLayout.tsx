@@ -1,4 +1,5 @@
-import { CssBaseline } from "@mui/material";
+import { Container, CssBaseline } from "@mui/material";
+
 import { Header } from "./Header";
 
 type AppLayoutProps = {
@@ -10,7 +11,15 @@ export const AppLayout = ({ children }: AppLayoutProps) => {
     <>
       <CssBaseline />
       <Header />
-      {children}
+      <Container
+        maxWidth="lg"
+        component="main"
+        sx={{
+          py: { xs: 2, sm: 3 },
+        }}
+      >
+        {children}
+      </Container>
     </>
   );
 };
