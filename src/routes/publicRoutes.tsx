@@ -1,6 +1,6 @@
 import { Navigate, Outlet, RouteObject } from "react-router-dom";
 
-import { Typography } from "@mui/material";
+import { Page } from "@/components";
 
 export const publicRoutes: RouteObject[] = [
   {
@@ -9,7 +9,7 @@ export const publicRoutes: RouteObject[] = [
     children: [
       {
         path: "/",
-        element: <Typography>App</Typography>,
+        element: <Page>App</Page>,
       },
       {
         path: "*",
