@@ -23,6 +23,7 @@ export const NavBar = () => {
         display: "flex",
         justifyContent: "space-between",
       }}
+      disableGutters
     >
       <BluebirdLogo full size={24} />
       <Stack direction="row" gap={1}>
