@@ -1,13 +1,37 @@
-import { Toolbar, Typography } from "@mui/material";
+import { BluebirdLogo, LinkButton } from "../elements";
+import { Stack, Toolbar } from "@mui/material";
 
-import { BluebirdLogo } from "../elements/Icon";
+const routes = [
+  {
+    title: "Home",
+    to: "/",
+  },
+  {
+    title: "Services",
+    to: "/services",
+  },
+  {
+    title: "Contact Us",
+    to: "/contact",
+  },
+];
 
 export const NavBar = () => {
   return (
-    <Toolbar>
-      <Typography>
-        <BluebirdLogo />
-      </Typography>
+    <Toolbar
+      sx={{
+        display: "flex",
+        justifyContent: "space-between",
+      }}
+    >
+      <BluebirdLogo full size={24} />
+      <Stack direction="row" gap={1}>
+        {routes.map((route, index) => (
+          <LinkButton key={index} to={route.to}>
+            {route.title}
+          </LinkButton>
+        ))}
+      </Stack>
     </Toolbar>
   );
 };
