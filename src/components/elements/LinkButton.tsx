@@ -13,9 +13,9 @@ export const LinkButton = ({ to, children, ...props }: LinkButtonProps) => {
   return (
     <Button
       component={Link}
-      {...props}
       to={to}
       color={isActive ? "primary" : "accent"}
+      {...props}
     >
       {children}
     </Button>
