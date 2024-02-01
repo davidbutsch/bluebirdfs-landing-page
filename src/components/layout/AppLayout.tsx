@@ -1,5 +1,6 @@
 import { Container, CssBaseline } from "@mui/material";
 
+import { FloatingCTA } from "./FloatingCTA";
 import { Header } from "./Header";
 
 type AppLayoutProps = {
@@ -20,6 +21,7 @@ export const AppLayout = ({ children }: AppLayoutProps) => {
       >
         {children}
       </Container>
+      <FloatingCTA />
     </>
   );
 };
