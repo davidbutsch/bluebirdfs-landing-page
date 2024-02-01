@@ -1,5 +1,7 @@
 import { BluebirdLogo, LinkButton } from "../elements";
-import { Stack, Toolbar } from "@mui/material";
+import { Stack, Toolbar, useMediaQuery } from "@mui/material";
+
+import { theme } from "@/styles";
 
 const routes = [
   {
@@ -17,6 +19,8 @@ const routes = [
 ];
 
 export const NavBar = () => {
+  const xs = useMediaQuery(theme.breakpoints.only("xs"));
+
   return (
     <Toolbar
       sx={{
@@ -25,7 +29,7 @@ export const NavBar = () => {
       }}
       disableGutters
     >
-      <BluebirdLogo full size={24} />
+      <BluebirdLogo full={!xs} size={24} />
       <Stack direction="row" gap={1}>
         {routes.map((route, index) => (
           <LinkButton key={index} to={route.to}>
