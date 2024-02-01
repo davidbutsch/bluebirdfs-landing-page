@@ -1,5 +1,6 @@
 import { Container, CssBaseline } from "@mui/material";
 
+import { FixedBackground } from "./FixedBackground";
 import { FloatingCTA } from "./FloatingCTA";
 import { Header } from "./Header";
 
@@ -16,13 +17,14 @@ export const AppLayout = ({ children }: AppLayoutProps) => {
         maxWidth="lg"
         component="main"
         sx={{
-          mt: '64px',
+          mt: "64px",
           py: { xs: 2, sm: 3 },
         }}
       >
         {children}
       </Container>
       <FloatingCTA />
+      <FixedBackground />
     </>
   );
 };
