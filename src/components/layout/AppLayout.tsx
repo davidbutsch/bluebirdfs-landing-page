@@ -16,6 +16,7 @@ export const AppLayout = ({ children }: AppLayoutProps) => {
         maxWidth="lg"
         component="main"
         sx={{
+          mt: '64px',
           py: { xs: 2, sm: 3 },
         }}
       >

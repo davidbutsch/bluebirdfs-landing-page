@@ -6,7 +6,7 @@ import { theme } from "@/styles";
 export const Header = () => {
   return (
     <AppBar
-      position="static"
+      position="fixed"
       color="transparent"
       sx={{
         bgcolor: "#00000008",
